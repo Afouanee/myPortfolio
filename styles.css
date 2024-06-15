@@ -5,196 +5,165 @@
     box-sizing: border-box;
 }
 
-/* Couleurs */
-:root {
-    --color-primary: #333; /* Noir */
-    --color-secondary: #fff; /* Blanc */
-    --color-accent: #888; /* Gris */
-    --color-gradient-start: #4e54c8;
-    --color-gradient-end: #8f94fb;
-}
-
-/* Transitions fluides */
-body {
-    transition: background-color 0.3s ease;
-}
-
-/* Animation au survol des liens */
-a {
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--color-accent);
-}
-
 /* Styles généraux pour le corps de la page */
 body, html {
     height: 100%;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
-    color: var(--color-secondary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     display: flex;
     flex-direction: column;
-}
-
-/* Conteneur principal */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Styles pour l'en-tête */
-header {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    align-items: center;
     text-align: center;
-    color: #fff;
+    color: #333;
+    background: #f5f5f7 url('images/background.jpg') center/cover;
 }
 
-/* Styles pour le contenu principal */
-main {
-    flex-grow: 1;
-}
-
-/* Section de projets */
-.projects, .contact {
-    background: rgba(0, 0, 0, 0.7);
+/* En-tête */
+header {
+    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    max-width: 800px;
+    margin: 20px;
 }
 
-/* Titres */
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
+.header-content {
+    text-align: center;
 }
 
-/* Media queries pour les petits écrans */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    header, .projects, .contact {
-        padding: 1rem;
-    }
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
 }
 
-/* Media queries pour les écrans très petits (smartphones) */
-@media (max-width: 576px) {
-    header, .projects, .contact {
-        padding: 1rem;
-    }
+.header-content p {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    color: #555;
 }
 
-/* Styles pour la galerie de projets */
-.project-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.header-content a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.header-content a:hover {
+    text-decoration: underline;
+}
+
+/* Contenu principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.projects {
+    width: 100%;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
 }
 
 .project {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.project img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px 12px 0 0;
-}
-
-.project:hover {
-    transform: translateY(-5px);
-}
-
-.project-details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 1rem;
-    border-radius: 0 0 12px 12px;
-    transition: transform 0.3s ease;
-    transform: translateY(100%);
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-.project:hover .project-details {
-    transform: translateY(0);
-}
-
-/* Media queries pour une disposition en une seule colonne sur les petits écrans */
-@media (max-width: 768px) {
-    .project-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-}
-
-/* Media queries pour une disposition en deux colonnes sur les écrans moyens */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .project-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Media queries pour une disposition en trois colonnes sur les grands écrans */
-@media (min-width: 1025px) {
-    .project-gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Styles pour le formulaire de contact */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-label {
+.project h3 {
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #fff;
+    color: #333;
 }
 
-input, textarea {
-    padding: 0.5rem;
-    border: 1px solid var(--color-primary);
-    border-radius: 5px;
+.project p {
     font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #555;
 }
 
-button {
-    padding: 0.7rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-primary);
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.project a {
+    color: #0073e6;
+    text-decoration: none;
 }
 
-button:hover {
-    background-color: var(--color-accent);
+.project a:hover {
+    text-decoration: underline;
 }
 
-/* Animation de changement de couleur pour l'en-tête */
-.change-color {
-    background-color: var(--color-accent) !important;
+/* Pied de page */
+footer {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #777;
+    margin-top: auto;
+    padding: 1rem;
+}
+
+.contact {
+    margin-bottom: 20px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.contact a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 600px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .project h3 {
+        font-size: 1.25rem;
+    }
+
+    .project p {
+        font-size: 0.875rem;
+    }
+
+    footer {
+        font-size: 0.75rem;
+    }
 }
