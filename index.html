@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afouane MOUHAMAD - Site en cours de développement</title>
+    <title>Afouane MOUHAMAD - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <h1>Afouane MOUHAMAD</h1>
-            <p>🎓 Étudiant en cycle ingénieur à l'ESIEE Paris</p>
-            <p>Spécialisé en Informatique et Applications</p>
-            <p>Focus sur l'Ingénierie 3D et les Technologies des Médias</p>
-            <p>🎮 Passionné de jeux vidéo, j'adore la magie de la 3D et la manière dont elle donne vie à des mondes immersifs.</p>
-            <p>Site en cours de développement</p>
         </div>
     </header>
+
     <main>
+        <section class="intro">
+            <div class="intro-content">
+                <h2>Étudiant en cycle ingénieur à l'ESIEE Paris</h2>
+                <p>Spécialisé en Informatique et Applications avec un intérêt marqué pour l'Ingénierie 3D et les Technologies des Médias.</p>
+                <p>Passionné par les jeux vidéo et fasciné par la magie de la 3D pour créer des mondes immersifs.</p>
+                <p>Site en cours de développement.</p>
+            </div>
+        </section>
+
         <section class="projects">
             <h2>Projets</h2>
+            
             <div class="project">
                 <h3>PAC-MAN (IA) 🕹️ | E3 (ESIEE) - 2024</h3>
                 <p><strong>Période :</strong> Mai 2024 - Juin 2024</p>
@@ -28,6 +34,7 @@
                 <p><strong>Compétences :</strong> Python (langage de programmation), GitHub</p>
                 <p><a href="https://github.com/Afouanee/Pacman">GitHub - Afouanee/Pacman</a></p>
             </div>
+        
             <div class="project">
                 <h3>Projet « Prince of Persia » 🤴🏽 | E3 (ESIEE) - 2024</h3>
                 <p><strong>Période :</strong> Mars 2024 - Avril 2024</p>
@@ -37,6 +44,7 @@
                 <p><a href="https://unity.com/">prince of persia - Unity Play</a></p>
                 <p><a href="https://notion.com/">PROJECT : Prince of Persia 🤴🏽 | Notion</a></p>
             </div>
+        
             <div class="project">
                 <h3>Projet structure "Drawing" 🎨 | E3 (ESIEE) - 2024</h3>
                 <p><strong>Période :</strong> Janvier 2024 - Février 2024</p>
@@ -44,6 +52,7 @@
                 <p>Conception d'une structure "Drawing" pour la représentation de dessins, manipulée via des fonctions similaires à FILE. Les fonctionnalités de base incluent le dessin de rectangles, cercles, segments et polygones avec choix de couleur. Les actions annexes comprennent la sauvegarde/chargement de dessins, l'exportation en SVG, la fusion de dessins, le décalage des éléments et la suppression sélective d'éléments. | C (langage de programmation)</p>
                 <p><strong>Compétences :</strong> C (langage de programmation)</p>
             </div>
+        
             <div class="project">
                 <h3>Dashboard sur les logements sociaux en France 🇫🇷 | E3 (ESIEE) - 2023/2024</h3>
                 <p><strong>Période :</strong> Novembre 2023 - Janvier 2024</p>
@@ -52,6 +61,7 @@
                 <p><strong>Compétences :</strong> Python (langage de programmation), GitHub</p>
                 <p><a href="https://github.com/LionMentality/Projet_Python">GitHub - LionMentality/Projet_Python</a></p>
             </div>
+        
             <div class="project">
                 <h3>Programmation assembleur sur EvalBot Cortex ARM M3 🤖 | E3 (ESIEE) - 2023/2024</h3>
                 <p><strong>Période :</strong> Décembre 2023 - Janvier 2024</p>
@@ -60,6 +70,7 @@
                 <p><strong>Compétences :</strong> Programme assembleur, Keil µVision</p>
                 <p><a href="https://github.com/Afouanee/Projet_evalbot">GitHub - Afouanee/Projet_evalbot</a></p>
             </div>
+        
             <div class="project">
                 <h3>Jeu type "Space Invaders" 👾 | E3 (ESIEE) - 2023</h3>
                 <p><strong>Période :</strong> Octobre 2023 - Décembre 2023</p>
@@ -68,14 +79,41 @@
                 <p><strong>Compétences :</strong> C#, GitHub</p>
                 <p><a href="https://github.com/Afouanee/SpaceInvaders">GitHub - Afouanee/SpaceInvaders</a></p>
             </div>
+        
+            <!-- Ajouter d'autres projets ici -->
         </section>
-    </main>
-    <footer>
+        
+
+        <section class="skills">
+            <h2>Compétences</h2>
+            <p>Cette section sera complétée ultérieurement.</p>
+        </section>
+
         <section class="contact">
             <h2>Contactez-moi</h2>
-            <p>Email : <a href="mailto:afouanemouhamad@gmail.com">afouanemouhamad@gmail.com</a></p>
-            <p>LinkedIn : <a href="https://linkedin.com/in/afouane-mouhamad">linkedin.com/in/afouane-mouhamad</a></p>
+            <form id="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Envoyer un message</button>
+            </form>
+            <div class="contact-info">
+                <p>Email : <a href="mailto:afouanemouhamad@gmail.com">afouanemouhamad@gmail.com</a></p>
+                <p>LinkedIn : <a href="https://linkedin.com/in/afouane-mouhamad">linkedin.com/in/afouane-mouhamad</a></p>
+            </div>
         </section>
+    </main>
+
+    <footer>
         <p>&copy; 2024 Afouane Mouhamad</p>
     </footer>
 </body>
