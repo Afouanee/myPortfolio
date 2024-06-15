@@ -63,6 +63,80 @@ header {
     color: #555;
 }
 
+/* Styles pour la section des compétences */
+.skills {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.skills-content {
+    color: #333;
+}
+
+.skills-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.skills-list {
+    margin-bottom: 20px;
+}
+
+.skills-list h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skills-list p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Styles pour la section des logiciels */
+.software {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.software-content {
+    color: #333;
+}
+
+.software-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.software-list {
+    margin-bottom: 20px;
+}
+
+.software-list h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.software-list p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+
 /* Styles pour la section des projets */
 .projects {
     width: 100%;
