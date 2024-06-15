@@ -10,6 +10,8 @@
     --color-primary: #333; /* Noir */
     --color-secondary: #fff; /* Blanc */
     --color-accent: #888; /* Gris */
+    --color-gradient-start: #4e54c8;
+    --color-gradient-end: #8f94fb;
 }
 
 /* Transitions fluides */
@@ -31,8 +33,8 @@ body, html {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+    color: var(--color-secondary);
     display: flex;
     flex-direction: column;
 }
@@ -46,11 +48,13 @@ body, html {
 
 /* Styles pour l'en-tête */
 header {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.7);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
 }
 
 /* Styles pour le contenu principal */
@@ -59,8 +63,8 @@ main {
 }
 
 /* Section de projets */
-.projects, .contact, .skills {
-    background: rgba(255, 255, 255, 0.9);
+.projects, .contact {
+    background: rgba(0, 0, 0, 0.7);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -70,6 +74,7 @@ main {
 /* Titres */
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
+    color: #fff;
 }
 
 /* Media queries pour les petits écrans */
@@ -78,18 +83,17 @@ h1, h2, h3 {
         padding: 10px;
     }
 
-    header, .projects, .contact, .skills {
+    header, .projects, .contact {
         padding: 1rem;
     }
 }
 
 /* Media queries pour les écrans très petits (smartphones) */
 @media (max-width: 576px) {
-    header, .projects, .contact, .skills {
+    header, .projects, .contact {
         padding: 1rem;
     }
 }
-
 
 /* Styles pour la galerie de projets */
 .project-gallery {
@@ -117,13 +121,12 @@ h1, h2, h3 {
     transform: translateY(-5px);
 }
 
-/* Styles pour les détails du projet */
 .project-details {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     border-radius: 0 0 12px 12px;
     transition: transform 0.3s ease;
@@ -133,6 +136,7 @@ h1, h2, h3 {
 .project:hover .project-details {
     transform: translateY(0);
 }
+
 /* Media queries pour une disposition en une seule colonne sur les petits écrans */
 @media (max-width: 768px) {
     .project-gallery {
@@ -152,4 +156,45 @@ h1, h2, h3 {
     .project-gallery {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+/* Styles pour le formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-accent);
+}
+
+/* Animation de changement de couleur pour l'en-tête */
+.change-color {
+    background-color: var(--color-accent) !important;
 }
